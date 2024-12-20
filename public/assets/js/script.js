@@ -20,42 +20,5 @@ var cond = true;
   setTheme(localStorage.getItem("movie-theme") || chathams_blue);
 
 
-
-let a = '  Search for products here...';
-
-  
-    let i = 0;
-    let b = '';
-  function start () {    
-   const fr = setInterval(() => {
-      if(i<a.length){
-        b += a[i];
-        document.getElementById('abc').placeholder = b+"_";
-        
-      }else{
-        clearInterval(fr)
-        let c=0;
-        const timer = setInterval(() => {
-          if(c%2 === 0){
-            document.getElementById('abc').placeholder = "  Search for products here..._";
-           
-          }else if(c === 15){
-            clearInterval(timer)
-            setTimeout( start, 120 );
-          }
-          else{
-            document.getElementById('abc').placeholder = "  Search for products here... ";
-          }
-          c++;
-        }, 180);
-        
-        i=-1;
-        b = '';
-      }
-      i++;
-    }, 120);
-    
-  }
-  setTimeout(start, 2000);
     
  
